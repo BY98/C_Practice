@@ -1,7 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "list.h"
 
-void test()
+// Creates the head of a linkedlist and returns it
+node * create_node()
 {
-    printf("This is running");
-    return 0;
+   node * node = (struct node *)malloc(sizeof(struct node));
+   return node;
 }

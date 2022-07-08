@@ -3,17 +3,20 @@
 	<stdio.h>
 	<stdlib.h>
 
-1657237304 source:c:\users\maske_000\documents\codingpractice\c_practice\main.c
+1657247815 source:c:\users\maske_000\documents\codingpractice\c_practice\main.c
 	<stdio.h>
 	<stdlib.h>
-	"BuckysInfo.h"
+	"employee.h"
+	"list.h"
 
 1657237688 c:\users\maske_000\documents\codingpractice\c_practice\buckysinfo.h
 
-1657237720 source:c:\users\maske_000\documents\codingpractice\c_practice\list.c
+1657248687 source:c:\users\maske_000\documents\codingpractice\c_practice\list.c
+	<stdio.h>
+	<stdlib.h>
 	"list.h"
 
-1657236993 c:\users\maske_000\documents\codingpractice\c_practice\list.h
+1657248678 c:\users\maske_000\documents\codingpractice\c_practice\list.h
 
 1657237746 source:c:\users\maske_000\documents\codingpractice\c_practice\helper_functions.c
 	"helper_functions.h"
@@ -25,9 +28,13 @@
 
 1657237651 c:\users\maske_000\documents\codingpractice\c_practice\scrap.h
 
-1657237630 source:c:\users\maske_000\documents\codingpractice\c_practice\user_info.c
+1657237751 source:c:\users\maske_000\documents\codingpractice\c_practice\user_info.c
 	"user_info.h"
-	<stdio.h>
 
-1657237644 c:\users\maske_000\documents\codingpractice\c_practice\user_info.h
+1657237859 c:\users\maske_000\documents\codingpractice\c_practice\user_info.h
+
+1657242908 source:c:\users\maske_000\documents\codingpractice\c_practice\employee.c
+	"employee.h"
+
+1657242554 c:\users\maske_000\documents\codingpractice\c_practice\employee.h
 
