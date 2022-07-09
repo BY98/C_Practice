@@ -30,7 +30,7 @@ struct node * create_linked_list()
     next_node->link = NULL;
     head->link->link = next_node;
 
-    return new_head;
+    return head;
 }
 
 
@@ -40,7 +40,7 @@ struct node * create_linked_list()
 
 struct node * insert_node_beginning(struct node *head)
 {
-    struct node * new_head = create_node()
+    struct node * new_head = create_node();
     new_head->data = 55;
     new_head->link = head;
     head = new_head;
@@ -63,3 +63,27 @@ while (current !=NULL)
     current = current->link;
 }
 printf("There are %d nodes in the linkedlist\n",count);}
+
+//
+// This function returns the middle node from a linked list sized 1 to 100
+//
+struct node* middleNode(struct node* head){
+
+    struct node* current = malloc(sizeof(struct node*));
+    struct node * array [100];
+
+    current =  head;
+    int count = 0;
+    while(current !=NULL)
+    {
+        array[count] = current;
+        count = count + 1;
+        current = current->link;
+    }
+    count = count/2;
+
+    return array[count];
+
+}
+
+    }

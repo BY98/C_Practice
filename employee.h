@@ -1,3 +1,6 @@
+#ifndef EMPLOYEE
+#define EMPLOYEE
+
 //Structs
 typedef struct employee{
 
@@ -9,3 +12,5 @@ int age;
 
 //Struct functions
 employee_template get_example_employee();
+
+#endif
