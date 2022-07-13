@@ -32,9 +32,30 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="BuckysInfo.h" />
+		<Unit filename="README.md" />
+		<Unit filename="Scrap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Scrap.h" />
+		<Unit filename="employee.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="employee.h" />
+		<Unit filename="helper_functions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="helper_functions.h" />
+		<Unit filename="list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="list.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="user_info.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="user_info.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
