@@ -6,6 +6,7 @@
 node * create_node()
 {
    node * node = (struct node *)malloc(sizeof(struct node));
+   node->link = NULL;
    return node;
 }
 
@@ -33,6 +34,49 @@ struct node * create_linked_list()
     return head;
 }
 
+//
+// Delete node at beginning of linked_list
+//
+struct node * delete_node_beginning(struct node *new_head)
+{
+    if (new_head != NULL)
+    {
+         node *temp_node = new_head;
+         if (temp_node != NULL)
+         {
+         new_head = new_head->link;
+         free(temp_node);
+         temp_node = NULL;
+         }
+    }
+
+    return new_head;
+
+}
+
+//
+// Deletes the last node in the list
+//
+void delete_last_node(struct node * head)
+{
+  if (head->link == NULL)
+  {
+      free(head);
+      head = NULL;
+  }
+  else if (head != NULL)
+  {
+      struct node * ptr = head;
+
+      while (ptr->link->link!= NULL)
+      {
+          ptr = ptr->link;
+      }
+
+      free(ptr->link);
+      ptr->link = NULL;
+  }
+}
 
 //
 // Insert node at the beginning of the list
@@ -47,6 +91,30 @@ struct node * insert_node_beginning(struct node *head)
     return head;
 }
 
+//
+// Insert node at any position;
+//
+struct node * insert_node(struct node *head, int data, int position)
+{
+    struct node *new_node = create_node();
+    struct node *ptr = head;
+
+
+    position--;
+
+    while (position !=1)
+    {
+        ptr = ptr->link;
+        position--;
+    }
+
+    new_node->link = ptr->link;
+    new_node->data = data;
+
+    ptr->link = new_node;
+
+    return new_node;
+}
 
 //
 // Counts the number of linked_list nodes
@@ -62,7 +130,8 @@ while (current !=NULL)
     count++;
     current = current->link;
 }
-printf("There are %d nodes in the linkedlist\n",count);}
+    printf("There are %d nodes in the linkedlist\n",count);
+}
 
 //
 // This function returns the middle node from a linked list sized 1 to 100
@@ -86,4 +155,4 @@ struct node* middleNode(struct node* head){
 
 }
 
-    }
+
