@@ -78,6 +78,42 @@ void delete_last_node(struct node * head)
   }
 }
 
+
+//
+// Deletes a node at a given position
+//
+void delete_node_pos(struct node ** head, int pos)
+{
+
+struct node *previous = *head;
+struct node *current = *head;
+
+if (*head == NULL)
+{
+    printf("The list is empty");
+}
+if (pos ==1)
+{
+    *head = *head->link;
+    free(current);
+    current = NULL;
+}
+else
+{
+    while (pos != 1)
+    {
+        previous = current;
+        current = current->link;
+        pos--;
+    }
+    previous->link = current->link;
+    free(current);
+    current = NULL;
+}
+}
+
+
+
 //
 // Insert node at the beginning of the list
 //
@@ -133,6 +169,7 @@ while (current !=NULL)
     printf("There are %d nodes in the linkedlist\n",count);
 }
 
+
 //
 // This function returns the middle node from a linked list sized 1 to 100
 //
@@ -155,4 +192,26 @@ struct node* middleNode(struct node* head){
 
 }
 
+//
+// Reverse LinkedList
+//
+struct node * reverse_list(struct node * head)
+{
+
+ struct node * prev = NULL;
+ struct node* next = NULL;
+
+ while (head != NULL)
+ {
+ next = head->link;
+ head->link = prev;
+ prev = head;
+ head = next;
+ }
+ head = prev;
+
+ return head;
+
+
+}
 

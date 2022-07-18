@@ -13,8 +13,7 @@ int main()
     count_nodes(head);
     delete_last_node(head);
     count_nodes(head);
-
-
+    head = reverse_list(head);
 
     return 0;
 }
