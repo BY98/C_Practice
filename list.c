@@ -94,7 +94,7 @@ if (*head == NULL)
 }
 if (pos ==1)
 {
-    *head = *head->link;
+    *head = (*head)->link;
     free(current);
     current = NULL;
 }
